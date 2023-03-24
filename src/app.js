@@ -1,9 +1,7 @@
-import GameSavingLoader from "./gamesaving.js";
+import GameSavingLoader from "./gameSavingLoader.js";
 
-GameSavingLoader.load().then((saving) => {
-    const savingObj = JSON.parse(saving);
-    return savingObj;
-   // saving объект класса GameSaving
-  }, (error) => {
-    console.log(error.message);// ...
+GameSavingLoader.load()
+.then((saving) => {
+    
+    console.log(saving);// ...
   });
