@@ -1,7 +1,8 @@
 import GameSavingLoader from "./gameSavingLoader.js";
 
-GameSavingLoader.load()
-.then((saving) => {
-    
-    console.log(saving);// ...
-  });
+ let res;
+  try {
+    res  = await GameSavingLoader.load()
+  } catch (e) {
+    console.log('NOT SAVED:' + e);
+  }
